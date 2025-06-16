@@ -1,0 +1,24 @@
+Information for Consumer FIVE > C1 created 2025-06-16T01:41:19+05:30
+
+Configuration:
+
+                    Name: C1
+               Pull Mode: true
+          Filter Subject: five.>
+          Deliver Policy: Last Per Subject
+              Ack Policy: Explicit
+                Ack Wait: 30.00s
+           Replay Policy: Instant
+         Max Ack Pending: 1
+       Max Waiting Pulls: 512
+
+State:
+
+            Host Version: 2.11.4
+      Required API Level: 0 hosted at level 1
+  Last Delivered Message: Consumer sequence: 2 Stream sequence: 12 Last delivery: 19.46s ago
+    Acknowledgment Floor: Consumer sequence: 2 Stream sequence: 12 Last Ack: 19.46s ago
+        Outstanding Acks: 0 out of maximum 1
+    Redelivered Messages: 0
+    Unprocessed Messages: 0
+           Waiting Pulls: 0 of maximum 512

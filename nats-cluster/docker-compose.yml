@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  nats-0:
+    image: nats:2.11.3-alpine
+    cap_add:
+      - NET_ADMIN
+    command: ["nats-server", "--config", "/etc/nats/nats.conf"]
+    volumes:
+      - ./nats-0.conf:/etc/nats/nats.conf:ro
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+      - "6222:6222"
+    networks:
+      - natsnet
+
+  nats-1:
+    image: nats:2.11.3-alpine
+    cap_add:
+      - NET_ADMIN
+    command: ["nats-server", "--config", "/etc/nats/nats.conf"]
+    volumes:
+      - ./nats-1.conf:/etc/nats/nats.conf:ro
+    ports:
+      - "4223:4222"
+      - "8223:8222"
+      - "6223:6222"
+    networks:
+      - natsnet
+
+  nats-2:
+    image: nats:2.11.3-alpine
+    cap_add:
+      - NET_ADMIN
+    command: ["nats-server", "--config", "/etc/nats/nats.conf"]
+    volumes:
+      - ./nats-2.conf:/etc/nats/nats.conf:ro
+    ports:
+      - "4224:4222"
+      - "8224:8222"
+      - "6224:6222"
+    networks:
+      - natsnet
+
+networks:
+  natsnet:
+    driver: bridge
+
