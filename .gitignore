@@ -1,0 +1,13 @@
+nats-cluster/data/*/jetstream/
+
+nats-cluster/data/
+
+logs/
+fetcher
+agg
+*.log
+*.cast
+*.gif
+
+.DS_Store
+*.swp
